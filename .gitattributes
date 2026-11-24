@@ -1,0 +1,2 @@
+# Fins de ligne LF partout : les scripts sont exécutés dans des conteneurs Linux.
+* text=auto eol=lf
