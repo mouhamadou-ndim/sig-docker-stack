@@ -129,6 +129,16 @@ def test_en_tetes_de_securite():
     assert "X-Powered-By" not in response.headers
 
 
+def test_capacites_annoncent_l_url_publique():
+    response = get(
+        "/geoserver/sig/ows",
+        params={"service": "WMS", "version": "1.3.0", "request": "GetCapabilities"},
+    )
+
+    assert response.status_code == 200
+    assert f"{BASE_URL}/geoserver/" in response.text, response.text[:1500]
+
+
 # --- Chaîne complète : IGN -> PostGIS -> GeoServer -> Nginx ------------------
 
 

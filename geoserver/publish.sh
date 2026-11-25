@@ -69,7 +69,8 @@ else
             {\"@key\": \"database\", \"\$\": \"$POSTGRES_DB\"},
             {\"@key\": \"schema\",   \"\$\": \"ref\"},
             {\"@key\": \"user\",     \"\$\": \"geoserver_ro\"},
-            {\"@key\": \"passwd\",   \"\$\": \"$GEOSERVER_DB_PASSWORD\"}
+            {\"@key\": \"passwd\",   \"\$\": \"$GEOSERVER_DB_PASSWORD\"},
+            {\"@key\": \"Expose primary keys\", \"\$\": \"true\"}
           ]
         }
       }
